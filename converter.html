@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toolbox – Converter</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  
+<header>
+  <img src="logo.png" alt="Toolbox Logo" class="logo" />
+  <h1>Toolbox</h1>
+  <nav>
+    <a href="converter.html">Converter</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="timer.html">Timer</a>
+    <a href="percentage.html">Percentage</a>
+    <a href="cleaner.html">Text Cleaner</a>
+  </nav>
+</header>
+
+  <main>
+    <section class="tool">
+      
+<h2>Unit Converter</h2>
+<label for="convert-from">Convert from:</label>
+<select id="convert-from">
+  <option value="kg">Kilogram (kg)</option>
+  <option value="m">Meter (m)</option>
+</select>
+<label for="convert-to">Convert to:</label>
+<select id="convert-to">
+  <option value="lb">Pound (lb)</option>
+  <option value="ft">Foot (ft)</option>
+</select>
+<input type="number" id="input-value" placeholder="Enter value" />
+<button onclick="convert()">Convert</button>
+<div id="result"></div>
+<script>
+
+function convert() {
+  const from = document.getElementById("convert-from").value;
+  const to = document.getElementById("convert-to").value;
+  const value = parseFloat(document.getElementById("input-value").value);
+  let resultText = "";
+
+  if (isNaN(value)) {
+    resultText = "Please enter a valid number.";
+  } else {
+    if (from === "kg" && to === "lb") {
+      resultText = `${value} kg = ${(value * 2.20462).toFixed(2)} lb`;
+    } else if (from === "m" && to === "ft") {
+      resultText = `${value} m = ${(value * 3.28084).toFixed(2)} ft`;
+    } else {
+      resultText = "Conversion not supported.";
+    }
+  }
+
+  document.getElementById("result").textContent = resultText;
+}
+
+</script>
+    </section>
+  </main>
+  
+<footer>
+  <p>&copy; 2025 Toolbox. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

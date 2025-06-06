@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toolbox – Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  
+<header>
+  <img src="logo.png" alt="Toolbox Logo" class="logo" />
+  <h1>Toolbox</h1>
+  <nav>
+    <a href="converter.html">Converter</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="timer.html">Timer</a>
+    <a href="percentage.html">Percentage</a>
+    <a href="cleaner.html">Text Cleaner</a>
+  </nav>
+</header>
+
+  <main>
+    <section class="tool">
+      
+<h2>Basic Calculator</h2>
+<input type="text" id="calc-input" placeholder="Type an expression like 12+7*3" />
+<button onclick="calculate()">Calculate</button>
+<div id="calc-result"></div>
+<script>
+function calculate() {
+  const input = document.getElementById("calc-input").value;
+  try {
+    const result = Function('"use strict"; return (' + input + ')')();
+    document.getElementById("calc-result").textContent = `Result: ${result}`;
+  } catch {
+    document.getElementById("calc-result").textContent = "Invalid expression.";
+  }
+}
+
+let timerInterval;
+let timeLeft = 0;
+
+</script>
+    </section>
+  </main>
+  
+<footer>
+  <p>&copy; 2025 Toolbox. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

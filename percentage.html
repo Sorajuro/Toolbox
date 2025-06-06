@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toolbox – Percentage</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  
+<header>
+  <img src="logo.png" alt="Toolbox Logo" class="logo" />
+  <h1>Toolbox</h1>
+  <nav>
+    <a href="converter.html">Converter</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="timer.html">Timer</a>
+    <a href="percentage.html">Percentage</a>
+    <a href="cleaner.html">Text Cleaner</a>
+  </nav>
+</header>
+
+  <main>
+    <section class="tool">
+      
+<h2>Percentage Calculator</h2>
+<input type="number" id="base-value" placeholder="Base value" />
+<input type="number" id="percentage" placeholder="Percentage (%)" />
+<button onclick="calculatePercentage()">Calculate</button>
+<div id="percentage-result"></div>
+<script>
+function calculatePercentage() {
+  const base = parseFloat(document.getElementById("base-value").value);
+  const perc = parseFloat(document.getElementById("percentage").value);
+  if (isNaN(base) || isNaN(perc)) {
+    document.getElementById("percentage-result").textContent = "Invalid input.";
+    return;
+  }
+  const result = (base * perc / 100).toFixed(2);
+  document.getElementById("percentage-result").textContent = `${perc}% of ${base} = ${result}`;
+}
+
+</script>
+    </section>
+  </main>
+  
+<footer>
+  <p>&copy; 2025 Toolbox. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

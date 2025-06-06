@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toolbox – Cleaner</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  
+<header>
+  <img src="logo.png" alt="Toolbox Logo" class="logo" />
+  <h1>Toolbox</h1>
+  <nav>
+    <a href="converter.html">Converter</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="timer.html">Timer</a>
+    <a href="percentage.html">Percentage</a>
+    <a href="cleaner.html">Text Cleaner</a>
+  </nav>
+</header>
+
+  <main>
+    <section class="tool">
+      
+<h2>Text Cleaner</h2>
+<textarea id="text-input" rows="4" placeholder="Paste your text here..."></textarea>
+<button onclick="cleanText()">Clean</button>
+<div id="text-result"></div>
+<script>
+function cleanText() {
+  const text = document.getElementById("text-input").value;
+  const cleaned = text.trim().replace(/\s+/g, " ");
+  document.getElementById("text-result").textContent = cleaned;
+}
+</script>
+    </section>
+  </main>
+  
+<footer>
+  <p>&copy; 2025 Toolbox. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
