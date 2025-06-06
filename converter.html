@@ -1,56 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Unit Converter - Toolbox</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" />
-</head>
-<body>
-  <header>
-    <img src="logo.png" alt="Toolbox Logo" />
-    <h1>Toolbox</h1>
-  </header>
-  <nav>
-    <a href="converter.html">Converter</a>
-    <a href="calculator.html">Calculator</a>
-    <a href="timer.html">Timer</a>
-    <a href="percentage.html">Percentage</a>
-    <a href="cleaner.html">Text Cleaner</a>
-  </nav>
-  <main>
-    
-<h2>Unit Converter</h2>
-<label>Convert from:</label>
-<select id="from">
-  <option value="kg">Kilograms</option>
-  <option value="m">Meters</option>
-</select>
-<label>Convert to:</label>
-<select id="to">
-  <option value="lb">Pounds</option>
-  <option value="ft">Feet</option>
-</select>
-<input type="number" id="input" placeholder="Enter value">
-<button onclick="convert()">Convert</button>
-<div id="result"></div>
+<html><head></head><body><h2>Unit Converter</h2>
 
-  </main>
-  <footer>
-    <p>&copy; 2025 Toolbox. All rights reserved.</p>
-  </footer>
-  <script>
-function convert() {
-  const from = document.getElementById("from").value;
-  const to = document.getElementById("to").value;
-  const input = parseFloat(document.getElementById("input").value);
-  let result = '';
-  if (from === "kg" && to === "lb") result = (input * 2.20462).toFixed(2) + " lb";
-  else if (from === "m" && to === "ft") result = (input * 3.28084).toFixed(2) + " ft";
-  else result = "Conversion not supported.";
-  document.getElementById("result").innerText = result;
-}
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7790028357934335"
+     crossorigin="anonymous"></script>
+
+<ins class="adsbygoogle"
+     style="display:block; text-align:center; margin: 1rem 0;"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-</body>
-</html>
+</body></html>

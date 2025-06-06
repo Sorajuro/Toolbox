@@ -1,57 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Timer - Toolbox</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" />
-</head>
-<body>
-  <header>
-    <img src="logo.png" alt="Toolbox Logo" />
-    <h1>Toolbox</h1>
-  </header>
-  <nav>
-    <a href="converter.html">Converter</a>
-    <a href="calculator.html">Calculator</a>
-    <a href="timer.html">Timer</a>
-    <a href="percentage.html">Percentage</a>
-    <a href="cleaner.html">Text Cleaner</a>
-  </nav>
-  <main>
-    
-<h2>Timer</h2>
-<input id="mins" type="number" placeholder="Minutes">
-<button onclick="start()">Start</button>
-<button onclick="stop()">Stop</button>
-<div id="time">00:00</div>
+<html><head></head><body><h2>Timer</h2>
 
-  </main>
-  <footer>
-    <p>&copy; 2025 Toolbox. All rights reserved.</p>
-  </footer>
-  <script>
-let interval, timeLeft;
-function start() {
-  const mins = parseInt(document.getElementById("mins").value);
-  timeLeft = mins * 60;
-  update();
-  clearInterval(interval);
-  interval = setInterval(() => {
-    timeLeft--;
-    if (timeLeft <= 0) clearInterval(interval);
-    update();
-  }, 1000);
-}
-function stop() {
-  clearInterval(interval);
-}
-function update() {
-  const min = String(Math.floor(timeLeft / 60)).padStart(2, '0');
-  const sec = String(timeLeft % 60).padStart(2, '0');
-  document.getElementById("time").innerText = `${min}:${sec}`;
-}
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7790028357934335"
+     crossorigin="anonymous"></script>
+
+<ins class="adsbygoogle"
+     style="display:block; text-align:center; margin: 1rem 0;"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-</body>
-</html>
+</body></html>
