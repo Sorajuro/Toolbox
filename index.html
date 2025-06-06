@@ -11,40 +11,41 @@
   <header>
     <img src="logo.png" alt="Toolbox Logo" class="logo" />
     <h1>Toolbox</h1>
-    <p>Simple and Useful Online Tools</p>
+    <nav>
+      <button onclick="showTool('converter')">Converter</button>
+      <button onclick="showTool('calculator')">Calculator</button>
+      <button onclick="showTool('timer')">Timer</button>
+      <button onclick="showTool('percentage')">Percentage</button>
+      <button onclick="showTool('cleaner')">Text Cleaner</button>
+    </nav>
   </header>
 
   <main>
-    <!-- Unit Converter -->
-    <section class="tool">
+    <section class="tool" id="tool-converter">
       <h2>Unit Converter</h2>
       <label for="convert-from">Convert from:</label>
       <select id="convert-from">
         <option value="kg">Kilogram (kg)</option>
         <option value="m">Meter (m)</option>
       </select>
-
       <label for="convert-to">Convert to:</label>
       <select id="convert-to">
         <option value="lb">Pound (lb)</option>
         <option value="ft">Foot (ft)</option>
       </select>
-
       <input type="number" id="input-value" placeholder="Enter value" />
       <button onclick="convert()">Convert</button>
       <div id="result"></div>
     </section>
 
-    <!-- Calculator -->
-    <section class="tool">
+    <section class="tool" id="tool-calculator">
       <h2>Basic Calculator</h2>
       <input type="text" id="calc-input" placeholder="Type an expression like 12+7*3" />
       <button onclick="calculate()">Calculate</button>
       <div id="calc-result"></div>
     </section>
 
-    <!-- Timer -->
-    <section class="tool">
+    <section class="tool" id="tool-timer">
       <h2>Timer</h2>
       <label for="timer-mins">Minutes:</label>
       <input type="number" id="timer-mins" placeholder="Enter minutes" />
@@ -53,8 +54,7 @@
       <div id="timer-display">00:00</div>
     </section>
 
-    <!-- Percentage Calculator -->
-    <section class="tool">
+    <section class="tool" id="tool-percentage">
       <h2>Percentage Calculator</h2>
       <input type="number" id="base-value" placeholder="Base value" />
       <input type="number" id="percentage" placeholder="Percentage (%)" />
@@ -62,8 +62,7 @@
       <div id="percentage-result"></div>
     </section>
 
-    <!-- Text Cleaner -->
-    <section class="tool">
+    <section class="tool" id="tool-cleaner">
       <h2>Text Cleaner</h2>
       <textarea id="text-input" rows="4" placeholder="Paste your text here..."></textarea>
       <button onclick="cleanText()">Clean</button>

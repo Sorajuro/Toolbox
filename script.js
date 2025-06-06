@@ -74,3 +74,15 @@ function cleanText() {
   const cleaned = text.trim().replace(/\s+/g, " ");
   document.getElementById("text-result").textContent = cleaned;
 }
+
+function showTool(name) {
+  const tools = document.querySelectorAll(".tool");
+  tools.forEach(tool => {
+    tool.classList.remove("active");
+  });
+  const activeTool = document.getElementById("tool-" + name);
+  if (activeTool) activeTool.classList.add("active");
+}
+
+// Affiche le convertisseur par défaut
+showTool("converter");
