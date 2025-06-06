@@ -33,8 +33,8 @@ main {
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
   width: 100%;
+  max-width: 400px;
 }
 
 .converter h2 {
@@ -80,4 +80,27 @@ footer {
   text-align: center;
   padding: 1rem;
   background-color: #e5e7eb;
+}
+
+/* Amélioration mobile */
+@media (max-width: 600px) {
+  main {
+    padding: 1rem;
+    align-items: flex-start;
+  }
+  .converter {
+    padding: 1rem;
+    border-radius: 0;
+    box-shadow: none;
+    max-width: 100%;
+  }
+  .converter button {
+    font-size: 1.1rem;
+  }
+}
+
+.logo {
+  max-width: 80px;
+  display: block;
+  margin: 0 auto 10px auto;
 }
