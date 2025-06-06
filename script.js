@@ -1,11 +1,20 @@
-function metersToFeet() {
-  const meters = document.getElementById('meters').value;
-  const feet = (meters * 3.28084).toFixed(2);
-  document.getElementById('feetResult').textContent = feet;
-}
+function convert() {
+  const from = document.getElementById("convert-from").value;
+  const to = document.getElementById("convert-to").value;
+  const value = parseFloat(document.getElementById("input-value").value);
+  let resultText = "";
 
-function kgToLb() {
-  const kg = document.getElementById('kg').value;
-  const lb = (kg * 2.20462).toFixed(2);
-  document.getElementById('lbResult').textContent = lb;
+  if (isNaN(value)) {
+    resultText = "Please enter a valid number.";
+  } else {
+    if (from === "kg" && to === "lb") {
+      resultText = `${value} kg = ${(value * 2.20462).toFixed(2)} lb`;
+    } else if (from === "m" && to === "ft") {
+      resultText = `${value} m = ${(value * 3.28084).toFixed(2)} ft`;
+    } else {
+      resultText = "Conversion not supported.";
+    }
+  }
+
+  document.getElementById("result").textContent = resultText;
 }
