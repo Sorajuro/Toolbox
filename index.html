@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Toolbox – Online Converters</title>
+  <title>Toolbox – All-in-One Tools</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -15,7 +15,8 @@
   </header>
 
   <main>
-    <section class="converter">
+    <!-- Unit Converter -->
+    <section class="tool">
       <h2>Unit Converter</h2>
       <label for="convert-from">Convert from:</label>
       <select id="convert-from">
@@ -31,8 +32,42 @@
 
       <input type="number" id="input-value" placeholder="Enter value" />
       <button onclick="convert()">Convert</button>
-
       <div id="result"></div>
+    </section>
+
+    <!-- Calculator -->
+    <section class="tool">
+      <h2>Basic Calculator</h2>
+      <input type="text" id="calc-input" placeholder="Type an expression like 12+7*3" />
+      <button onclick="calculate()">Calculate</button>
+      <div id="calc-result"></div>
+    </section>
+
+    <!-- Timer -->
+    <section class="tool">
+      <h2>Timer</h2>
+      <label for="timer-mins">Minutes:</label>
+      <input type="number" id="timer-mins" placeholder="Enter minutes" />
+      <button onclick="startTimer()">Start</button>
+      <button onclick="stopTimer()">Stop</button>
+      <div id="timer-display">00:00</div>
+    </section>
+
+    <!-- Percentage Calculator -->
+    <section class="tool">
+      <h2>Percentage Calculator</h2>
+      <input type="number" id="base-value" placeholder="Base value" />
+      <input type="number" id="percentage" placeholder="Percentage (%)" />
+      <button onclick="calculatePercentage()">Calculate</button>
+      <div id="percentage-result"></div>
+    </section>
+
+    <!-- Text Cleaner -->
+    <section class="tool">
+      <h2>Text Cleaner</h2>
+      <textarea id="text-input" rows="4" placeholder="Paste your text here..."></textarea>
+      <button onclick="cleanText()">Clean</button>
+      <div id="text-result"></div>
     </section>
   </main>
 
