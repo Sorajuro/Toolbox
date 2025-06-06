@@ -2,42 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Text Cleaner – Toolbox</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Text Cleaner - Toolbox</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="favicon.ico" />
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Toolbox Logo" class="logo" />
+    <img src="logo.png" alt="Toolbox Logo" />
     <h1>Toolbox</h1>
-    <nav>
-      <a href="converter.html">Converter</a>
-      <a href="calculator.html">Calculator</a>
-      <a href="timer.html">Timer</a>
-      <a href="percentage.html">Percentage</a>
-      <a href="cleaner.html">Text Cleaner</a>
-    </nav>
   </header>
+  <nav>
+    <a href="converter.html">Converter</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="timer.html">Timer</a>
+    <a href="percentage.html">Percentage</a>
+    <a href="cleaner.html">Text Cleaner</a>
+  </nav>
   <main>
-    <section class="tool">
-      
+    
 <h2>Text Cleaner</h2>
-<textarea id="text-input" rows="4" placeholder="Paste your text here..."></textarea>
-<button onclick="cleanText()">Clean</button>
-<div id="text-result"></div>
-<script>
-function cleanText() {
-  const text = document.getElementById("text-input").value;
-  const cleaned = text.trim().replace(/\s+/g, " ");
-  document.getElementById("text-result").textContent = cleaned;
-}
-</script>
+<textarea id="txt" rows="5" placeholder="Paste your text here..."></textarea>
+<button onclick="clean()">Clean</button>
+<div id="clean-result"></div>
 
-    </section>
   </main>
   <footer>
     <p>&copy; 2025 Toolbox. All rights reserved.</p>
   </footer>
+  <script>
+function clean() {
+  const txt = document.getElementById("txt").value;
+  const cleaned = txt.trim().replace(/\s+/g, " ");
+  document.getElementById("clean-result").innerText = cleaned;
+}
+</script>
 </body>
 </html>
