@@ -3,24 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Toolbox – Percentage</title>
+  <title>Percentage Calculator – Toolbox</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  
-<header>
-  <img src="logo.png" alt="Toolbox Logo" class="logo" />
-  <h1>Toolbox</h1>
-  <nav>
-    <a href="converter.html">Converter</a>
-    <a href="calculator.html">Calculator</a>
-    <a href="timer.html">Timer</a>
-    <a href="percentage.html">Percentage</a>
-    <a href="cleaner.html">Text Cleaner</a>
-  </nav>
-</header>
-
+  <header>
+    <img src="logo.png" alt="Toolbox Logo" class="logo" />
+    <h1>Toolbox</h1>
+    <nav>
+      <a href="converter.html">Converter</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="timer.html">Timer</a>
+      <a href="percentage.html">Percentage</a>
+      <a href="cleaner.html">Text Cleaner</a>
+    </nav>
+  </header>
   <main>
     <section class="tool">
       
@@ -40,14 +38,12 @@ function calculatePercentage() {
   const result = (base * perc / 100).toFixed(2);
   document.getElementById("percentage-result").textContent = `${perc}% of ${base} = ${result}`;
 }
-
 </script>
+
     </section>
   </main>
-  
-<footer>
-  <p>&copy; 2025 Toolbox. All rights reserved.</p>
-</footer>
-
+  <footer>
+    <p>&copy; 2025 Toolbox. All rights reserved.</p>
+  </footer>
 </body>
 </html>

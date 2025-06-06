@@ -3,24 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Toolbox – Converter</title>
+  <title>Unit Converter – Toolbox</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  
-<header>
-  <img src="logo.png" alt="Toolbox Logo" class="logo" />
-  <h1>Toolbox</h1>
-  <nav>
-    <a href="converter.html">Converter</a>
-    <a href="calculator.html">Calculator</a>
-    <a href="timer.html">Timer</a>
-    <a href="percentage.html">Percentage</a>
-    <a href="cleaner.html">Text Cleaner</a>
-  </nav>
-</header>
-
+  <header>
+    <img src="logo.png" alt="Toolbox Logo" class="logo" />
+    <h1>Toolbox</h1>
+    <nav>
+      <a href="converter.html">Converter</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="timer.html">Timer</a>
+      <a href="percentage.html">Percentage</a>
+      <a href="cleaner.html">Text Cleaner</a>
+    </nav>
+  </header>
   <main>
     <section class="tool">
       
@@ -39,13 +37,11 @@
 <button onclick="convert()">Convert</button>
 <div id="result"></div>
 <script>
-
 function convert() {
   const from = document.getElementById("convert-from").value;
   const to = document.getElementById("convert-to").value;
   const value = parseFloat(document.getElementById("input-value").value);
   let resultText = "";
-
   if (isNaN(value)) {
     resultText = "Please enter a valid number.";
   } else {
@@ -57,17 +53,14 @@ function convert() {
       resultText = "Conversion not supported.";
     }
   }
-
   document.getElementById("result").textContent = resultText;
 }
-
 </script>
+
     </section>
   </main>
-  
-<footer>
-  <p>&copy; 2025 Toolbox. All rights reserved.</p>
-</footer>
-
+  <footer>
+    <p>&copy; 2025 Toolbox. All rights reserved.</p>
+  </footer>
 </body>
 </html>
