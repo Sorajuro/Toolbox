@@ -1,56 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Online Timer - Countdown Tool</title>
-  <meta name="description" content="Set a countdown timer in seconds. Online and easy to use.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timer - Toolbox</title>
+  <meta name="description" content="This is the timer tool page.">
   <meta name="google-adsense-account" content="ca-pub-7790028357934335">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7790028357934335" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<header>
-  <img src="logo.png" alt="Toolbox Logo" class="logo" />
-  <nav>
-    <a href="converter.html">Converter</a>
-    <a href="calculator.html">Calculator</a>
-    <a href="timer.html">Timer</a>
-    <a href="percentage.html">Percentage</a>
-    <a href="cleaner.html">Cleaner</a>
-  </nav>
-</header>
-
-<main>
-  <p>Start a countdown timer in seconds using this online tool.</p>
-  <input type="number" id="time" placeholder="Seconds" />
-<button onclick="start()">Start</button>
-<p id="display"></p>
-<script>
-let interval;
-function start() {
-  clearInterval(interval);
-  let t = parseInt(document.getElementById("time").value);
-  const disp = document.getElementById("display");
-  interval = setInterval(() => {
-    if (t <= 0) {
-      clearInterval(interval);
-      disp.innerText = "Time's up!";
-    } else {
-      disp.innerText = t + " seconds remaining";
-      t--;
-    }
-  }, 1000);
-}
-</script>
-</main>
-
-<footer>
-  <p>&copy; 2025 Toolbox | <a href='converter.html'>Unit Converter</a> | <a href='calculator.html'>Calculator</a> |
-  <a href='timer.html'>Timer</a> | <a href='percentage.html'>Percentage Calculator</a> |
-  <a href='cleaner.html'>Text Cleaner</a></p>
-</footer>
-
+  <header><img src="logo.png" alt="Logo" class="logo" /></header>
+  <main><h1>Timer Tool</h1></main>
+  <footer><p>&copy; 2025 Toolbox</p></footer>
 </body>
 </html>

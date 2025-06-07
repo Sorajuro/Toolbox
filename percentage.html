@@ -1,52 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Percentage Calculator - Fast Online</title>
-  <meta name="description" content="Calculate percentage quickly with our free online tool.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Percentage - Toolbox</title>
+  <meta name="description" content="This is the percentage tool page.">
   <meta name="google-adsense-account" content="ca-pub-7790028357934335">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7790028357934335" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<header>
-  <img src="logo.png" alt="Toolbox Logo" class="logo" />
-  <nav>
-    <a href="converter.html">Converter</a>
-    <a href="calculator.html">Calculator</a>
-    <a href="timer.html">Timer</a>
-    <a href="percentage.html">Percentage</a>
-    <a href="cleaner.html">Cleaner</a>
-  </nav>
-</header>
-
-<main>
-  <p>Enter part and total to get instant percentage results.</p>
-  <form onsubmit="event.preventDefault(); percent();">
-  <input type="number" id="part" placeholder="Part" />
-  <input type="number" id="total" placeholder="Total" />
-  <button type="submit">Calculate</button>
-</form>
-<p id="p-result"></p>
-<script>
-function percent() {
-  const part = parseFloat(document.getElementById("part").value);
-  const total = parseFloat(document.getElementById("total").value);
-  if (!isNaN(part) && !isNaN(total) && total !== 0) {
-    const res = ((part / total) * 100).toFixed(2) + "%";
-    document.getElementById("p-result").innerText = "Result: " + res;
-  }
-}
-</script>
-</main>
-
-<footer>
-  <p>&copy; 2025 Toolbox | <a href='converter.html'>Unit Converter</a> | <a href='calculator.html'>Calculator</a> |
-  <a href='timer.html'>Timer</a> | <a href='percentage.html'>Percentage Calculator</a> |
-  <a href='cleaner.html'>Text Cleaner</a></p>
-</footer>
-
+  <header><img src="logo.png" alt="Logo" class="logo" /></header>
+  <main><h1>Percentage Tool</h1></main>
+  <footer><p>&copy; 2025 Toolbox</p></footer>
 </body>
 </html>
