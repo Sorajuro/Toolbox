@@ -1,39 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Text Cleaner - Toolbox</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+
 <header>
-  <div class="container">
-    <img src="logo.png" alt="Toolbox Logo" class="logo"/>
-    <nav>
-      <a href="converter.html">Converter</a>
-      <a href="calculator.html">Calculator</a>
-      <a href="timer.html">Timer</a>
-      <a href="percentage.html">Percentage</a>
-      <a href="cleaner.html">Cleaner</a>
-    </nav>
-  </div>
+  <img src="logo.png" alt="Toolbox Logo" class="logo fade-in" />
+  <nav>
+    <a href="converter.html">Converter</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="timer.html">Timer</a>
+    <a href="percentage.html">Percentage</a>
+    <a href="cleaner.html">Cleaner</a>
+  </nav>
 </header>
 
-  <main>
-    <h2>Text Cleaner</h2>
-    <textarea id="text" rows="5" placeholder="Paste your text here..."></textarea><br/>
-<button onclick="cleanText()">Clean</button>
-<p id="clean-result"></p>
+<main class="fade-in">
+  <h2>Text Cleaner</h2>
+  <textarea id="text" rows="4" placeholder="Paste your text..."></textarea>
+<button onclick="clean()">Clean</button>
+<p id="cleaned"></p>
 <script>
-function cleanText() {
-  const input = document.getElementById("text").value;
-  const cleaned = input.replace(/\s+/g, " ").trim();
-  document.getElementById("clean-result").innerText = cleaned;
+function clean() {
+  const t = document.getElementById("text").value;
+  const cleaned = t.replace(/\s+/g, " ").trim();
+  document.getElementById("cleaned").innerText = cleaned;
 }
 </script>
-  </main>
-  <footer><p>&copy; 2025 Toolbox</p></footer>
+</main>
+<footer>&copy; 2025 Toolbox</footer>
 </body>
 </html>

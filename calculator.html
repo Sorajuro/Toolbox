@@ -1,55 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculator - Toolbox</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+
 <header>
-  <div class="container">
-    <img src="logo.png" alt="Toolbox Logo" class="logo"/>
-    <nav>
-      <a href="converter.html">Converter</a>
-      <a href="calculator.html">Calculator</a>
-      <a href="timer.html">Timer</a>
-      <a href="percentage.html">Percentage</a>
-      <a href="cleaner.html">Cleaner</a>
-    </nav>
-  </div>
+  <img src="logo.png" alt="Toolbox Logo" class="logo fade-in" />
+  <nav>
+    <a href="converter.html">Converter</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="timer.html">Timer</a>
+    <a href="percentage.html">Percentage</a>
+    <a href="cleaner.html">Cleaner</a>
+  </nav>
 </header>
 
-  <main>
-    <h2>Calculator</h2>
-    <form onsubmit="event.preventDefault(); calculate();">
-  <input type="number" id="num1" placeholder="Number 1" required />
-  <select id="operator">
+<main class="fade-in">
+  <h2>Calculator</h2>
+  <form onsubmit="event.preventDefault(); calc();">
+  <input type="number" id="n1" placeholder="First number" />
+  <select id="op">
     <option value="+">+</option>
     <option value="-">-</option>
     <option value="*">*</option>
     <option value="/">/</option>
   </select>
-  <input type="number" id="num2" placeholder="Number 2" required />
+  <input type="number" id="n2" placeholder="Second number" />
   <button type="submit">=</button>
 </form>
-<p id="calc-result"></p>
+<p id="res"></p>
 <script>
-function calculate() {
-  const n1 = parseFloat(document.getElementById("num1").value);
-  const n2 = parseFloat(document.getElementById("num2").value);
-  const op = document.getElementById("operator").value;
-  let r = "";
-  if (isNaN(n1) || isNaN(n2)) {
-    r = "Invalid input.";
-  } else {
-    r = eval(n1 + op + n2);
-  }
-  document.getElementById("calc-result").innerText = "Result: " + r;
+function calc() {
+  const a = parseFloat(document.getElementById("n1").value);
+  const b = parseFloat(document.getElementById("n2").value);
+  const op = document.getElementById("op").value;
+  let r = eval(a + op + b);
+  document.getElementById("res").innerText = "Result: " + r;
 }
 </script>
-  </main>
-  <footer><p>&copy; 2025 Toolbox</p></footer>
+</main>
+<footer>&copy; 2025 Toolbox</footer>
 </body>
 </html>
