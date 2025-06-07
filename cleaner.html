@@ -3,19 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Text Cleaner - Toolbox</title>
-  <meta name="description" content="A useful online text cleaner tool.">
+  <title>Text Cleaner - Remove Extra Spaces</title>
+  <meta name="description" content="Clean up your text online by removing extra spaces.">
   <meta name="google-adsense-account" content="ca-pub-7790028357934335">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7790028357934335" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header><img src="logo.png" alt="Toolbox Logo" class="logo" /></header>
-  <main class="fade-in"><p>This is the text cleaner page.</p></main>
-  <footer>
-    <p>&copy; 2025 Toolbox | <a href='converter.html'>Unit Converter</a> | <a href='calculator.html'>Calculator</a> |
-    <a href='timer.html'>Timer</a> | <a href='percentage.html'>Percentage Calculator</a> |
-    <a href='cleaner.html'>Text Cleaner</a></p>
-  </footer>
+
+<header>
+  <img src="logo.png" alt="Toolbox Logo" class="logo" />
+  <nav>
+    <a href="converter.html">Converter</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="timer.html">Timer</a>
+    <a href="percentage.html">Percentage</a>
+    <a href="cleaner.html">Cleaner</a>
+  </nav>
+</header>
+
+<main>
+  <p>Paste your messy text and get a clean version with one click.</p>
+  <textarea id="text" rows="4" placeholder="Paste your text..."></textarea>
+<button onclick="clean()">Clean</button>
+<p id="cleaned"></p>
+<script>
+function clean() {
+  const t = document.getElementById("text").value;
+  const cleaned = t.replace(/\s+/g, " ").trim();
+  document.getElementById("cleaned").innerText = cleaned;
+}
+</script>
+</main>
+
+<footer>
+  <p>&copy; 2025 Toolbox | <a href='converter.html'>Unit Converter</a> | <a href='calculator.html'>Calculator</a> |
+  <a href='timer.html'>Timer</a> | <a href='percentage.html'>Percentage Calculator</a> |
+  <a href='cleaner.html'>Text Cleaner</a></p>
+</footer>
+
 </body>
 </html>

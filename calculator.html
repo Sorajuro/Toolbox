@@ -3,19 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculator - Toolbox</title>
-  <meta name="description" content="A useful online calculator tool.">
+  <title>Online Calculator - Simple and Fast</title>
+  <meta name="description" content="Use our free online calculator for addition, subtraction, multiplication and division.">
   <meta name="google-adsense-account" content="ca-pub-7790028357934335">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7790028357934335" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header><img src="logo.png" alt="Toolbox Logo" class="logo" /></header>
-  <main class="fade-in"><p>This is the calculator page.</p></main>
-  <footer>
-    <p>&copy; 2025 Toolbox | <a href='converter.html'>Unit Converter</a> | <a href='calculator.html'>Calculator</a> |
-    <a href='timer.html'>Timer</a> | <a href='percentage.html'>Percentage Calculator</a> |
-    <a href='cleaner.html'>Text Cleaner</a></p>
-  </footer>
+
+<header>
+  <img src="logo.png" alt="Toolbox Logo" class="logo" />
+  <nav>
+    <a href="converter.html">Converter</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="timer.html">Timer</a>
+    <a href="percentage.html">Percentage</a>
+    <a href="cleaner.html">Cleaner</a>
+  </nav>
+</header>
+
+<main>
+  <p>Simple and quick calculator for your daily math needs.</p>
+  <form onsubmit="event.preventDefault(); calc();">
+  <input type="number" id="n1" placeholder="First number" />
+  <select id="op">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+  <input type="number" id="n2" placeholder="Second number" />
+  <button type="submit">=</button>
+</form>
+<p id="res"></p>
+<script>
+function calc() {
+  const a = parseFloat(document.getElementById("n1").value);
+  const b = parseFloat(document.getElementById("n2").value);
+  const op = document.getElementById("op").value;
+  let r = eval(a + op + b);
+  document.getElementById("res").innerText = "Result: " + r;
+}
+</script>
+</main>
+
+<footer>
+  <p>&copy; 2025 Toolbox | <a href='converter.html'>Unit Converter</a> | <a href='calculator.html'>Calculator</a> |
+  <a href='timer.html'>Timer</a> | <a href='percentage.html'>Percentage Calculator</a> |
+  <a href='cleaner.html'>Text Cleaner</a></p>
+</footer>
+
 </body>
 </html>
