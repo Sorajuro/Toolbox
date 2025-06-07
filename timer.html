@@ -3,15 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Timer - Toolbox</title>
-  <meta name="description" content="This is the timer tool page.">
+  <title>Online Timer - My Big Toolbox</title>
+  <meta name="description" content="Countdown timer in seconds. Start easily.">
   <meta name="google-adsense-account" content="ca-pub-7790028357934335">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7790028357934335" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header><img src="logo.png" alt="Logo" class="logo" /></header>
-  <main><h1>Timer Tool</h1></main>
-  <footer><p>&copy; 2025 Toolbox</p></footer>
+  
+<header>
+  <img src="logo.png" class="logo" alt="Toolbox Logo" />
+  <nav>
+    <a href="converter.html">Converter</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="timer.html">Timer</a>
+    <a href="percentage.html">Percentage</a>
+    <a href="cleaner.html">Cleaner</a>
+  </nav>
+</header>
+
+  <main>
+    <input type="number" id="time" placeholder="Seconds" />
+<button onclick="start()">Start</button>
+<p id="display"></p>
+<script>
+function start() {
+  let t = parseInt(document.getElementById("time").value);
+  const disp = document.getElementById("display");
+  const interval = setInterval(() => {
+    if (t <= 0) {
+      clearInterval(interval);
+      disp.innerText = "Time's up!";
+    } else {
+      disp.innerText = t + " seconds remaining";
+      t--;
+    }
+  }, 1000);
+}
+</script>
+  </main>
+  
+<footer>
+  <p>&copy; 2025 My Big Toolbox | All tools free to use online.</p>
+</footer>
+
 </body>
 </html>

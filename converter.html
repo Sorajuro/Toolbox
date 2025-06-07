@@ -3,15 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Converter - Toolbox</title>
-  <meta name="description" content="This is the converter tool page.">
+  <title>Unit Converter - My Big Toolbox</title>
+  <meta name="description" content="Convert units like kg to lb, meters to feet and more.">
   <meta name="google-adsense-account" content="ca-pub-7790028357934335">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7790028357934335" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header><img src="logo.png" alt="Logo" class="logo" /></header>
-  <main><h1>Converter Tool</h1></main>
-  <footer><p>&copy; 2025 Toolbox</p></footer>
+  
+<header>
+  <img src="logo.png" class="logo" alt="Toolbox Logo" />
+  <nav>
+    <a href="converter.html">Converter</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="timer.html">Timer</a>
+    <a href="percentage.html">Percentage</a>
+    <a href="cleaner.html">Cleaner</a>
+  </nav>
+</header>
+
+  <main>
+    <form id="convform">
+  <input type="number" id="input" placeholder="Enter value" />
+  <select id="type">
+    <option value="kg-lb">kg → lb</option>
+    <option value="lb-kg">lb → kg</option>
+    <option value="m-ft">m → ft</option>
+    <option value="ft-m">ft → m</option>
+  </select>
+  <button type="submit">Convert</button>
+</form>
+<p id="result"></p>
+<script>
+document.getElementById("convform").addEventListener("submit", function(e){
+  e.preventDefault();
+  const v = parseFloat(document.getElementById("input").value);
+  const t = document.getElementById("type").value;
+  let r = "";
+  if(t === "kg-lb") r = v * 2.20462 + " lb";
+  if(t === "lb-kg") r = v / 2.20462 + " kg";
+  if(t === "m-ft") r = v * 3.28084 + " ft";
+  if(t === "ft-m") r = v / 3.28084 + " m";
+  document.getElementById("result").innerText = "Result: " + r;
+});
+</script>
+  </main>
+  
+<footer>
+  <p>&copy; 2025 My Big Toolbox | All tools free to use online.</p>
+</footer>
+
 </body>
 </html>

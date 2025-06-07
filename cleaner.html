@@ -3,15 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cleaner - Toolbox</title>
-  <meta name="description" content="This is the cleaner tool page.">
+  <title>Text Cleaner - My Big Toolbox</title>
+  <meta name="description" content="Remove extra spaces and clean up text.">
   <meta name="google-adsense-account" content="ca-pub-7790028357934335">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7790028357934335" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header><img src="logo.png" alt="Logo" class="logo" /></header>
-  <main><h1>Cleaner Tool</h1></main>
-  <footer><p>&copy; 2025 Toolbox</p></footer>
+  
+<header>
+  <img src="logo.png" class="logo" alt="Toolbox Logo" />
+  <nav>
+    <a href="converter.html">Converter</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="timer.html">Timer</a>
+    <a href="percentage.html">Percentage</a>
+    <a href="cleaner.html">Cleaner</a>
+  </nav>
+</header>
+
+  <main>
+    <textarea id="text" rows="4" placeholder="Paste text..."></textarea>
+<button onclick="cleanText()">Clean</button>
+<p id="cleaned"></p>
+<script>
+function cleanText() {
+  const text = document.getElementById("text").value;
+  const cleaned = text.replace(/\s+/g, " ").trim();
+  document.getElementById("cleaned").innerText = cleaned;
+}
+</script>
+  </main>
+  
+<footer>
+  <p>&copy; 2025 My Big Toolbox | All tools free to use online.</p>
+</footer>
+
 </body>
 </html>
