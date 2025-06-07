@@ -4,40 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Percentage Calculator - Toolbox</title>
+  <meta name="description" content="A useful online percentage calculator tool.">
+  <meta name="google-adsense-account" content="ca-pub-7790028357934335">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7790028357934335" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-  <img src="logo.png" alt="Toolbox Logo" class="logo fade-in" />
-  <nav>
-    <a href="converter.html">Converter</a>
-    <a href="calculator.html">Calculator</a>
-    <a href="timer.html">Timer</a>
-    <a href="percentage.html">Percentage</a>
-    <a href="cleaner.html">Cleaner</a>
-  </nav>
-</header>
-
-<main class="fade-in">
-  <h2>Percentage Calculator</h2>
-  <form onsubmit="event.preventDefault(); percent();">
-  <input type="number" id="part" placeholder="Part" />
-  <input type="number" id="total" placeholder="Total" />
-  <button type="submit">Calculate</button>
-</form>
-<p id="p-result"></p>
-<script>
-function percent() {
-  const part = parseFloat(document.getElementById("part").value);
-  const total = parseFloat(document.getElementById("total").value);
-  if (!isNaN(part) && !isNaN(total) && total !== 0) {
-    const res = ((part / total) * 100).toFixed(2) + "%";
-    document.getElementById("p-result").innerText = "Result: " + res;
-  }
-}
-</script>
-</main>
-<footer>&copy; 2025 Toolbox</footer>
+  <header><img src="logo.png" alt="Toolbox Logo" class="logo" /></header>
+  <main class="fade-in"><p>This is the percentage calculator page.</p></main>
+  <footer>
+    <p>&copy; 2025 Toolbox | <a href='converter.html'>Unit Converter</a> | <a href='calculator.html'>Calculator</a> |
+    <a href='timer.html'>Timer</a> | <a href='percentage.html'>Percentage Calculator</a> |
+    <a href='cleaner.html'>Text Cleaner</a></p>
+  </footer>
 </body>
 </html>

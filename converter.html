@@ -4,52 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Unit Converter - Toolbox</title>
+  <meta name="description" content="A useful online unit converter tool.">
+  <meta name="google-adsense-account" content="ca-pub-7790028357934335">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7790028357934335" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-  <img src="logo.png" alt="Toolbox Logo" class="logo fade-in" />
-  <nav>
-    <a href="converter.html">Converter</a>
-    <a href="calculator.html">Calculator</a>
-    <a href="timer.html">Timer</a>
-    <a href="percentage.html">Percentage</a>
-    <a href="cleaner.html">Cleaner</a>
-  </nav>
-</header>
-
-<main class="fade-in">
-  <h2>Unit Converter</h2>
-  <form id="converter-form">
-  <input type="number" id="input-value" placeholder="Enter value" required />
-  <select id="conversion-type">
-    <option value="kg-lb">Kilograms to Pounds</option>
-    <option value="lb-kg">Pounds to Kilograms</option>
-    <option value="m-ft">Meters to Feet</option>
-    <option value="ft-m">Feet to Meters</option>
-  </select>
-  <button type="submit">Convert</button>
-</form>
-<p id="result"></p>
-<script>
-document.getElementById("converter-form").addEventListener("submit", function(e) {
-  e.preventDefault();
-  const value = parseFloat(document.getElementById("input-value").value);
-  const type = document.getElementById("conversion-type").value;
-  let result = "";
-  if (!isNaN(value)) {
-    switch(type) {
-      case "kg-lb": result = (value * 2.20462).toFixed(2) + " lb"; break;
-      case "lb-kg": result = (value / 2.20462).toFixed(2) + " kg"; break;
-      case "m-ft": result = (value * 3.28084).toFixed(2) + " ft"; break;
-      case "ft-m": result = (value / 3.28084).toFixed(2) + " m"; break;
-    }
-    document.getElementById("result").innerText = "Result: " + result;
-  }
-});
-</script>
-</main>
-<footer>&copy; 2025 Toolbox</footer>
+  <header><img src="logo.png" alt="Toolbox Logo" class="logo" /></header>
+  <main class="fade-in"><p>This is the unit converter page.</p></main>
+  <footer>
+    <p>&copy; 2025 Toolbox | <a href='converter.html'>Unit Converter</a> | <a href='calculator.html'>Calculator</a> |
+    <a href='timer.html'>Timer</a> | <a href='percentage.html'>Percentage Calculator</a> |
+    <a href='cleaner.html'>Text Cleaner</a></p>
+  </footer>
 </body>
 </html>
